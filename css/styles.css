@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: #333;
 }
 
 .nav {
@@ -7,8 +8,9 @@ body {
   top: 0;
   width: 350px;
   height: 100vh;
-  background-color: red;
+  background-color: azure;
   transform: translateX(-350px);
+  transition: transform 0.3s;
 }
 
 @media screen and (min-width: 768px) {
@@ -19,6 +21,22 @@ body {
 @media screen and (min-width: 1024px) {
   .nav {
     transform: translateX(0);
+  }
+}
+
+.toggle-menu {
+  position: absolute;
+  left: 350px;
+  font-size: 2rem;
+  color: azure;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+}
+
+@media screen and (min-width: 768px) {
+  .toggle-menu {
+    display: none;
   }
 }
 
@@ -38,5 +56,42 @@ body {
 @media screen and (min-width: 1024px) {
   .main {
     margin-left: 350px;
+  }
+}
+
+.main-menu {
+  padding-left: 0;
+}
+
+.main-menu__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.main-menu__link {
+  width: 200px;
+  padding: 1rem 3rem;
+  border-radius: 0 10px 10px 0;
+  background-color: royalblue;
+  color: azure;
+  text-decoration: none;
+}
+
+.main-menu__icon {
+  margin-right: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main-menu__icon {
+    transform: translateX(260px);
+    color: #333;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-menu__icon {
+    transform: translateX(0);
+    color: azure;
   }
 }
